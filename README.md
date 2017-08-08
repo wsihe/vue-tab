@@ -8,8 +8,6 @@
 
 使用vue2.0搭建多页签开发应用，公司用到的中后台系统大多是这种形式
 
-__注：此项目纯属个人练习。__
-
 
 ### 技术栈
 
@@ -18,7 +16,7 @@ vue2 + vue-rotuer2 + vuex + axios + webpack + ES6/7 + pug + stylus
 
 ### 项目运行
 
-#### 注意：由于涉及大量的 ES6 等新属性，建议使用 node 6 稳定版
+#### 注意：由于涉及到 ES6 等新属性，建议使用 node 6 稳定版
 
 ```
 git clone https://github.com/wsihe/Many-pages.git
@@ -33,7 +31,7 @@ npm run dev
 
 ### 项目截图
 
-![](https://static.oschina.net/uploads/img/201708/07184501_aWiR.png "")
+![](https://static.oschina.net/uploads/img/201708/08102312_5Tfu.png "")
 
 # 说明
 
