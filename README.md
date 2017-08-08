@@ -6,7 +6,7 @@
 
 ### 前言
 
-使用vue2.0搭建多页签开发应用，公司用到的中后台系统大多是这种形式
+使用vue2.0搭建多页签开发应用，公司用到的中后台系统大多也是这种形式
 
 
 ### 技术栈
@@ -21,7 +21,7 @@ vue2 + vue-rotuer2 + vuex + axios + webpack + ES6/7 + pug + stylus
 ```
 git clone https://github.com/wsihe/vue-many.git
 
-cd Many-pages
+cd vue-many
 
 npm install
 
