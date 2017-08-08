@@ -1,4 +1,4 @@
-# Many-pages
+# vue-many
 > Many pages for vue (Vue2.0示例项目-多页签应用)
 
 [教程地址](http://wusihe.com/2017/07/02/Vue2-1/)
@@ -36,6 +36,7 @@ npm run dev
 # 说明
 
 >  如果对您有帮助，您可以点右上角 "Star" 你的支持就是我的动力 谢谢！ ^_^
+
 >  如有问题请直接在 Issues 中提，或者你有更好的解决方案，欢迎 PR
 
 
