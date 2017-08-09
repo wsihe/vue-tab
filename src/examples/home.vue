@@ -6,7 +6,9 @@
 
 <template lang="pug">
   .page.page-home
-    p river-组件(components)
+    .page-mark(v-marked="").
+      # vue-many
+      Many pages for vue (Vue2.0示例项目-多页签应用)
 </template>
 
 <script>
