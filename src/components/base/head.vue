@@ -61,7 +61,7 @@
         width 415px
         height 30px
         padding 10px 0
-        background url("../../assets/logo.png") no-repeat
+        background url("../../assets/logo_vue.png") no-repeat
         background-size 60%
     &__search
       float right
@@ -76,29 +76,4 @@
         padding 21px 20px
         &.active
           background #E5E9F2
-      .dropdown-menu
-        position absolute
-        top 100%
-        right 0
-        padding 5px 0
-        margin -3px 0 0
-        min-width 180px
-        border 1px solid #ccc
-        background #fff
-        z-index 1000
-        li
-          a
-            color #0f75b7
-            display block
-            padding 3px 20px
-            clear both
-            &.user-name
-              color #333
-              border-bottom 1px solid #ccc
-            &.logout
-              text-align center
-          &.task
-            padding 8px 0
-            border-bottom 1px solid #ccc
-
 </style>
