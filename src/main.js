@@ -7,6 +7,10 @@ import 'element-ui/lib/theme-default/index.css'
 import directives from './directives/directives'
 import Marked from './directives/marked'
 import * as filters from './filter/filters'
+import Wuui from 'wuui'
+import 'wuui/dist/wuui.css'
+
+Vue.use(Wuui)
 
 import Message from './packages/message/main'
 

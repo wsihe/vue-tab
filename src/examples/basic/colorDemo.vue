@@ -18,7 +18,6 @@
       }
     },
     created () {
-      this.getVipData()
     },
     activated () {
 //      console.log('customerInquire activated')
