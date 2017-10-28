@@ -4,7 +4,7 @@
       a.logo(href='javascript:void(0)')
     .navbar__collapse
       .navbar__search
-        el-input(placeholder="请输入组件编号或组件名称" icon="search")
+        wu-input(placeholder="请输入组件编号或组件名称" icon="search")
 </template>
 
 <script>
@@ -59,8 +59,7 @@
       .logo
         display block
         width 415px
-        height 30px
-        padding 10px 0
+        height 46px
         background url("../../assets/logo_vue.png") no-repeat
         background-size 60%
     &__search
