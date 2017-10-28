@@ -235,9 +235,7 @@
         z-index 999
         .icon
           position absolute
-          top 0 !important
-          margin-right 0 !important
-          right 0
+          right -10px
           padding 14px 15px
           height 22px
           display inline-block
