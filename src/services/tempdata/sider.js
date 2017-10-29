@@ -10,7 +10,13 @@ export const siderList = {
       'index': null,
       'menuItem': [
         {
-          'label': 'Color 色彩',
+          'label': '登录',
+          'url': 'colorDemo',
+          'index': null,
+          'menuItem': null
+        },
+        {
+          'label': '拦截',
           'url': 'colorDemo',
           'index': null,
           'menuItem': null
@@ -24,7 +30,7 @@ export const siderList = {
       'index': null,
       'menuItem': [
         {
-          'label': 'Input 输入框',
+          'label': 'wuui 组件',
           'url': 'ModelManage',
           'index': null,
           'menuItem': null
@@ -38,7 +44,7 @@ export const siderList = {
       'index': null,
       'menuItem': [
         {
-          'label': 'Pagination 分页',
+          'label': 'Echart 图表',
           'url': 'paginationDemo',
           'index': null,
           'menuItem': null
@@ -47,7 +53,7 @@ export const siderList = {
     },
     {
       'icon': 'icon-report',
-      'label': '表格',
+      'label': '表单',
       'url': null,
       'index': null,
       'menuItem': [
