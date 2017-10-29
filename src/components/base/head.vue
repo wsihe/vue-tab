@@ -4,7 +4,10 @@
       a.logo(href='javascript:void(0)')
     .navbar__collapse
       .navbar__search
-        wu-input(placeholder="请输入组件编号或组件名称" icon="search")
+        wu-input(placeholder="查询客户" icon="search")
+        icon(type="setting")
+        icon(type="user")
+
 </template>
 
 <script>
@@ -65,7 +68,14 @@
     &__search
       float right
       margin-top 15px
-      width 220px
+      width 230px
+      .wu-input-group-wrapper
+        width 160px
+      .wu-icon
+        display inline-block
+        margin-top 2px
+        margin-left 10px
+        font-size 22px
     .navbar-nav
       position relative
       float right
