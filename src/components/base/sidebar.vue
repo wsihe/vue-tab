@@ -14,7 +14,7 @@
         .sidebar__item(:class="{active:homeTabActive}")
           .sidebar__parent(@click.stop="onHomeMenuClick()")
             i.icon
-            span Introduction
+            span 首页
             .sidebar__item_nav
               i.icon.icon-sider-flex(@click.stop="showMenu()")
         .sidebar__item(v-for="(menu, index) in menuList", :class="{active: menu.active}", v-cloak)

@@ -1,11 +1,11 @@
 export const siderList = {
-  'label': 'river-组件',
+  'label': 'river-admin',
   'url': null,
   'index': null,
   'menuItem': [
     {
       'icon': 'icon-customer',
-      'label': 'Basic',
+      'label': '用户信息',
       'url': null,
       'index': null,
       'menuItem': [
@@ -25,7 +25,7 @@ export const siderList = {
     },
     {
       'icon': 'icon-model',
-      'label': 'Form',
+      'label': '组件',
       'url': null,
       'index': null,
       'menuItem': [
@@ -57,7 +57,7 @@ export const siderList = {
     },
     {
       'icon': 'icon-product',
-      'label': 'Data',
+      'label': '图表',
       'url': null,
       'index': null,
       'menuItem': [
@@ -71,7 +71,7 @@ export const siderList = {
     },
     {
       'icon': 'icon-report',
-      'label': 'Notice',
+      'label': '表格',
       'url': null,
       'index': null,
       'menuItem': [
@@ -91,7 +91,7 @@ export const siderList = {
     },
     {
       'icon': 'icon-market',
-      'label': 'Navigation',
+      'label': '业务',
       'url': null,
       'index': null,
       'menuItem': [
@@ -117,7 +117,7 @@ export const siderList = {
     },
     {
       'icon': 'icon-performance',
-      'label': 'Others',
+      'label': '其他',
       'url': null,
       'index': null,
       'menuItem': [
