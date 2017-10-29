@@ -14,12 +14,6 @@ export const siderList = {
           'url': 'colorDemo',
           'index': null,
           'menuItem': null
-        },
-        {
-          'label': 'Button 按钮',
-          'url': 'buttonDemo',
-          'index': null,
-          'menuItem': null
         }
       ]
     },
@@ -31,24 +25,6 @@ export const siderList = {
       'menuItem': [
         {
           'label': 'Input 输入框',
-          'url': 'ModelManage',
-          'index': null,
-          'menuItem': null
-        },
-        {
-          'label': 'Select 选择',
-          'url': 'ModelManage',
-          'index': null,
-          'menuItem': null
-        },
-        {
-          'label': 'Switch 开关',
-          'url': 'switchDemo',
-          'index': null,
-          'menuItem': null
-        },
-        {
-          'label': 'DatePicker 日期选择',
           'url': 'ModelManage',
           'index': null,
           'menuItem': null
@@ -80,12 +56,6 @@ export const siderList = {
           'url': 'messageDemo',
           'index': null,
           'menuItem': null
-        },
-        {
-          'label': 'MessageBox 弹框',
-          'url': 'RuleReport',
-          'index': null,
-          'menuItem': null
         }
       ]
     },
@@ -100,18 +70,6 @@ export const siderList = {
           'url': 'MarketView',
           'index': null,
           'menuItem': null
-        },
-        {
-          'label': 'Dropdown 下拉菜单',
-          'url': 'MarketViewManage',
-          'index': null,
-          'menuItem': null
-        },
-        {
-          'label': 'Tabs 标签页',
-          'url': 'MarketViewManage',
-          'index': null,
-          'menuItem': null
         }
       ]
     },
@@ -124,18 +82,6 @@ export const siderList = {
         {
           'label': 'Tooltip 文字提示',
           'url': 'CoverageReport',
-          'index': null,
-          'menuItem': null
-        },
-        {
-          'label': 'Popover 弹出框',
-          'url': 'CoverageReport',
-          'index': null,
-          'menuItem': null
-        },
-        {
-          'label': 'Collapse 折叠面板',
-          'url': 'collapseDemo',
           'index': null,
           'menuItem': null
         }

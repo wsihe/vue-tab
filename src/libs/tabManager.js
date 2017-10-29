@@ -6,7 +6,7 @@ export const tabManager = function (vue, store, router, options) {
   var moduleName = (options || {}).moduleName || 'route'
   var tabs = [{
     name: 'home',
-    title: 'Introduction',
+    title: '首页',
     active: true
   }]
   // if (window.sessionStorage.VUE_TABS) {
