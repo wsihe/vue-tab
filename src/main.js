@@ -10,8 +10,6 @@ import 'wuui/dist/wuui.css'
 
 Vue.use(Wuui)
 
-import Message from './packages/message/main'
-
 Vue.config.productionTip = false
 
 Vue.use(Marked)
@@ -25,13 +23,6 @@ Object.keys(directives).forEach(key => {
 Object.keys(filters).forEach(key => {
   Vue.filter(key, filters[key])
 })
-
-const install = function (Vue, opts = {}) {
-  Vue.prototype.$message = Message
-}
-if (typeof window !== 'undefined' && window.Vue) {
-  install(window.Vue)
-}
 
 new Vue({
   router,

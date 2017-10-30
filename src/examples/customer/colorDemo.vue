@@ -1,25 +1,26 @@
 /**
-* @file   assetView.vue
+* @file   customerInquire.vue
 * @author river
-* @create 2017-05-16 13:44
+* @create 2017-05-16 14:44
 */
 
 <template lang="pug">
-  .page.page-home
-      p (Vue2.0示例项目-多页签应用)
+  .page.page-color
+    p Color 色彩
 </template>
 
 <script>
   export default {
-    name: 'assetView',
+    name: 'colorDemo',
     data () {
       return {
-        totalAsset: ''      // 客户总资产
+        tableData: []
       }
     },
     created () {
     },
     activated () {
+//      console.log('customerInquire activated')
     },
     methods: {
     }
@@ -27,7 +28,7 @@
 </script>
 
 <style lang="stylus" scoped>
-  @import '../css/define'
-  .page-home
+  @import '../../css/define'
+  .page-color
     display block
 </style>

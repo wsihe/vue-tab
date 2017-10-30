@@ -5,7 +5,7 @@
     .navbar__collapse
       .navbar__search
         wu-input(placeholder="查询客户" icon="search")
-        icon(type="setting")
+        icon(type="mail")
         icon(type="user")
 
 </template>
@@ -76,6 +76,7 @@
         margin-top 2px
         margin-left 10px
         font-size 22px
+        cursor pointer
     .navbar-nav
       position relative
       float right
