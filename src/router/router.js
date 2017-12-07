@@ -1,20 +1,20 @@
-import Vue from 'vue'
-import Router from 'vue-router'
-import index from '@/index'
+import Vue from 'vue';
+import Router from 'vue-router';
+import index from '@/index';
 // import store from '@/store/'
 // import {RECORD_LOGIN} from '@/store/mutation-types'
 // import {getStore} from '@/common/utils'
 
-Vue.use(Router)
+Vue.use(Router);
 
-const home = r => require.ensure([], () => r(require('@/examples/home')), 'home')
-const colorDemo = r => require.ensure([], () => r(require('@/examples/basic/colorDemo')), 'colorDemo')
-const buttonDemo = r => require.ensure([], () => r(require('@/examples/basic/buttonDemo')), 'buttonDemo')
-const switchDemo = r => require.ensure([], () => r(require('@/examples/form/switchDemo')), 'switchDemo')
-const paginationDemo = r => require.ensure([], () => r(require('@/examples/data/paginationDemo')), 'paginationDemo')
-const messageDemo = r => require.ensure([], () => r(require('@/examples/notice/messageDemo')), 'messageDemo')
-const collapseDemo = r => require.ensure([], () => r(require('@/examples/others/collapseDemo')), 'collapseDemo')
-// const login = r => require.ensure([], () => r(require('@/examples/login/login')), 'login')
+const home = r => require.ensure([], () => r(require('@/pages/home')), 'home');
+const colorDemo = r => require.ensure([], () => r(require('@/pages/basic/colorDemo')), 'colorDemo');
+const buttonDemo = r => require.ensure([], () => r(require('@/pages/basic/buttonDemo')), 'buttonDemo');
+const switchDemo = r => require.ensure([], () => r(require('@/pages/form/switchDemo')), 'switchDemo');
+const paginationDemo = r => require.ensure([], () => r(require('@/pages/data/paginationDemo')), 'paginationDemo');
+const messageDemo = r => require.ensure([], () => r(require('@/pages/notice/messageDemo')), 'messageDemo');
+const collapseDemo = r => require.ensure([], () => r(require('@/pages/others/collapseDemo')), 'collapseDemo');
+// const login = r => require.ensure([], () => r(require('@/pages/login/login')), 'login')
 const router = new Router({
   mode: 'history',
   routes:
@@ -24,66 +24,66 @@ const router = new Router({
     children: [
       {
         path: '',
-        redirect: '/home'
+        redirect: '/home',
       },
       {
         path: '/home',
         name: 'home',
         meta: {
-          title: 'Introduction'
+          title: 'Introduction',
         },
-        component: home
+        component: home,
       },
       {
         path: '/colorDemo',
         name: 'colorDemo',
         meta: {
-          title: 'Color-色彩'
+          title: 'Color-色彩',
         },
-        component: colorDemo
+        component: colorDemo,
       },
       {
         path: '/buttonDemo',
         name: 'buttonDemo',
         meta: {
-          title: 'Button-按钮'
+          title: 'Button-按钮',
         },
-        component: buttonDemo
+        component: buttonDemo,
       },
       {
         path: '/switchDemo',
         name: 'switchDemo',
         meta: {
-          title: 'Switch-开关'
+          title: 'Switch-开关',
         },
-        component: switchDemo
+        component: switchDemo,
       },
       {
         path: '/paginationDemo',
         name: 'paginationDemo',
         meta: {
-          title: 'Pagination-分页'
+          title: 'Pagination-分页',
         },
-        component: paginationDemo
+        component: paginationDemo,
       },
       {
         path: '/messageDemo',
         name: 'messageDemo',
         meta: {
-          title: 'Message-消息'
+          title: 'Message-消息',
         },
-        component: messageDemo
+        component: messageDemo,
       },
       {
         path: '/collapseDemo',
         name: 'collapseDemo',
         meta: {
-          title: 'Collapse-折叠'
+          title: 'Collapse-折叠',
         },
-        component: collapseDemo
-      }]
-  }]
-})
+        component: collapseDemo,
+      }],
+  }],
+});
 
 // if (getStore('token')) {
 //   store.commit(RECORD_LOGIN, getStore('token'))
@@ -103,5 +103,5 @@ const router = new Router({
 //   }
 // })
 
-export default router
+export default router;
 

@@ -4,9 +4,6 @@
       a.logo(href='javascript:void(0)')
     .navbar__collapse
       .navbar__search
-        wu-input(placeholder="查询客户" icon="search")
-        icon(type="mail")
-        icon(type="user")
 
 </template>
 

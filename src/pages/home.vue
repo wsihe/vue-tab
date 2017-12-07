@@ -12,18 +12,18 @@
 <script>
   export default {
     name: 'assetView',
-    data () {
+    data() {
       return {
-        totalAsset: ''      // 客户总资产
-      }
+        totalAsset: '',      // 客户总资产
+      };
     },
-    created () {
+    created() {
     },
-    activated () {
+    activated() {
     },
     methods: {
-    }
-  }
+    },
+  };
 </script>
 
 <style lang="stylus" scoped>
