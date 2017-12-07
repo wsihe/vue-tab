@@ -1,30 +1,23 @@
-import Vue from 'vue'
-import router from './router/router'
-import store from './store/'
-import { tabManager } from './libs/tabManager'
-import directives from './directives/directives'
-import Marked from './directives/marked'
-import * as filters from './filter/filters'
-import Wuui from 'wuui'
-import 'wuui/dist/wuui.css'
+import Vue from 'vue';
+import router from './router/router';
+import store from './store/';
+import { tabManager } from './libs/tabManager';
+import directives from './directives/directives';
+import * as filters from './filter/filters';
 
-Vue.use(Wuui)
+Vue.config.productionTip = false;
 
-Vue.config.productionTip = false
+tabManager(Vue, store, router);
 
-Vue.use(Marked)
+Object.keys(directives).forEach((key) => {
+  Vue.directive(key, directives[key]);
+});
 
-tabManager(Vue, store, router)
-
-Object.keys(directives).forEach(key => {
-  Vue.directive(key, directives[key])
-})
-
-Object.keys(filters).forEach(key => {
-  Vue.filter(key, filters[key])
-})
+Object.keys(filters).forEach((key) => {
+  Vue.filter(key, filters[key]);
+});
 
 new Vue({
   router,
-  store
-}).$mount('#app')
+  store,
+}).$mount('#app');
