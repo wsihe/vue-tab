@@ -7,7 +7,6 @@
 
 使用vue2.0搭建多页签开发应用。
 
-
 ### 技术栈
 
 vue2 + vue-rotuer2 + vuex + axios + webpack + ES6/7 + pug + stylus
@@ -27,6 +26,13 @@ npm install
 npm run dev
 
 ```
+
+### 功能
+
+- 登录/登出
+- 权限管理
+- 收缩侧栏
+- 标签导航
 
 ### 项目截图
 
