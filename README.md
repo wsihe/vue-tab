@@ -17,7 +17,7 @@ vue2 + vue-rotuer2 + vuex + axios + webpack + ES6/7 + pug + stylus
 #### 注意：由于涉及到 ES6 等新属性，建议使用 node 6 稳定版
 
 ```
-git clone https://github.com/wsihe/vue-many.git
+git clone https://github.com/wsihe/vue-tab3.0.git
 
 cd vue-many
 
