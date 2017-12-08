@@ -39,6 +39,7 @@
 
 <style lang="stylus">
   @import "css/index.styl"
+  /*@import 'css/element-theme/lib/index.css'*/
   .main__content
     position absolute
     top 60px

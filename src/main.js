@@ -4,7 +4,6 @@ import store from './store/';
 import { tabManager } from './libs/tabManager';
 import ElementUI from 'element-ui';
 import './css/element-theme/lib/index.css';
-// import './css/element-theme/src/index.scss';
 
 import directives from './directives/directives';
 import * as filters from './filter/filters';
