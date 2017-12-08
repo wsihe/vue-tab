@@ -4,6 +4,8 @@ var webpack = require('webpack')
 module.exports = {
   entry: {
     vendor: [
+      'jquery',
+      'element-ui',
       'axios',
       'vue/dist/vue.common.js',
       'vue-router',
