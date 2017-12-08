@@ -3,10 +3,33 @@ const path = require('path')
 const utils = require('./utils')
 const config = require('../config')
 const vueLoaderConfig = require('./vue-loader.conf')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const HappyPack = require('happypack')
+const os = require('os')
+const happyThreadPool = HappyPack.ThreadPool({ size: os.cpus().length })
 
 function resolve (dir) {
   return path.join(__dirname, '..', dir)
 }
+
+const cssLoader = ExtractTextPlugin.extract({
+  use: [
+    'happypack/loader?id=happy-css'
+  ]
+})
+
+// inject happypack accelerate packing for vue-loader
+Object.assign(vueLoaderConfig.loaders, {
+  js: 'happypack/loader?id=happy-babel-vue',
+  css: cssLoader
+})
+
+const createHappyPlugin = (id, loaders) => new HappyPack({
+  id,
+  loaders,
+  threadPool: happyThreadPool,
+  verbose: process.env.HAPPY_VERBOSE === '1',
+})
 
 const createLintingRule = () => ({
   test: /\.(js|vue)$/,
@@ -34,7 +57,7 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.vue', '.json'],
     alias: {
-      'vue$': 'vue/dist/vue.esm.js',
+      'vue$': 'vue/dist/vue.common.js',
       '@': resolve('src'),
       'assets': resolve('src/assets'),
       'components': resolve('src/components'),
@@ -42,6 +65,7 @@ module.exports = {
     }
   },
   module: {
+    noParse: /node_modules\/(element-ui\.js)/,
     rules: [
       ...(config.dev.useEslint ? [createLintingRule()] : []),
       {
@@ -49,10 +73,14 @@ module.exports = {
         loader: 'vue-loader',
         options: vueLoaderConfig
       },
+      // {
+      //   test: /\.scss$/,
+      //   loader: ExtractTextPlugin.extract('style', 'happypack/loader?id=sass')
+      // },
       {
         test: /\.js$/,
-        loader: 'babel-loader',
-        include: [resolve('src'), resolve('test')]
+        loader: 'happypack/loader?id=happy-babel-js',
+        include: [resolve('src')]
       },
       {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
@@ -80,12 +108,21 @@ module.exports = {
       }
     ]
   },
-  node: {
-    setImmediate: false,
-    dgram: 'empty',
-    fs: 'empty',
-    net: 'empty',
-    tls: 'empty',
-    child_process: 'empty'
-  }
+  plugins: [
+    createHappyPlugin('happy-babel-js', ['babel-loader?cacheDirectory=true']),
+    createHappyPlugin('happy-babel-vue', ['babel-loader?cacheDirectory=true']),
+    // createHappyPlugin('sass', [ 'css?modules&importLoaders=2&sourceMap!autoprefixer?browsers=last 2 version!sass?outputStyle=expanded&sourceMap=true&sourceMapContents=true' ]),
+    createHappyPlugin('happy-css', ['css-loader', 'vue-style-loader']),
+    // https://github.com/amireh/happypack/pull/131
+    new HappyPack({
+      loaders: [{
+        path: 'vue-loader',
+        query: {
+          loaders: {
+            scss: 'vue-style-loader!css-loader!sass-loader?indentedSyntax'
+          }
+        }
+      }]
+    })
+  ]
 }
