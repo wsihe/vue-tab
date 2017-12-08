@@ -7,13 +7,13 @@ import index from '@/index';
 
 Vue.use(Router);
 
-const home = r => require.ensure([], () => r(require('@/pages/home')), 'home');
-const colorDemo = r => require.ensure([], () => r(require('@/pages/basic/colorDemo')), 'colorDemo');
-const buttonDemo = r => require.ensure([], () => r(require('@/pages/basic/buttonDemo')), 'buttonDemo');
-const switchDemo = r => require.ensure([], () => r(require('@/pages/form/switchDemo')), 'switchDemo');
-const paginationDemo = r => require.ensure([], () => r(require('@/pages/data/paginationDemo')), 'paginationDemo');
-const messageDemo = r => require.ensure([], () => r(require('@/pages/notice/messageDemo')), 'messageDemo');
-const collapseDemo = r => require.ensure([], () => r(require('@/pages/others/collapseDemo')), 'collapseDemo');
+const home = () => import('@/pages/home.vue');
+const colorDemo = () => import('@/pages/basic/colorDemo.vue');
+const buttonDemo = () => import('@/pages/basic/buttonDemo.vue');
+const switchDemo = () => import('@/pages/form/switchDemo.vue');
+const paginationDemo = () => import('@/pages/data/paginationDemo.vue');
+const messageDemo = () => import('@/pages/notice/messageDemo.vue');
+const collapseDemo = () => import('@/pages/others/collapseDemo.vue');
 // const login = r => require.ensure([], () => r(require('@/pages/login/login')), 'login')
 const router = new Router({
   mode: 'history',
