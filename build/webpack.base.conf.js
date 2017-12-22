@@ -107,10 +107,37 @@ module.exports = {
           limit: 10000,
           name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
         }
+      },
+      {
+        test: /\.svg$/,
+        use: [
+          { loader: 'svg-sprite-loader', options: { symbolId: 'icon-[name]'} },
+          'svgo-loader'
+        ],
+        include: [resolve('src/assets/icons-svg')]
       }
     ]
   },
   plugins: [
+    new webpack.LoaderOptionsPlugin({
+      options: {
+        svgoConfig: {
+          plugins: [
+            { removeTitle: true },
+            { convertColors: { shorthex: true } },
+            { convertPathData: true },
+            { cleanupAttrs: true },
+            { removeComments: true },
+            { removeDesc: true },
+            { removeUselessDefs: true },
+            { removeEmptyAttrs: true },
+            { removeHiddenElems: true },
+            { removeEmptyText: true }
+          ]
+        }
+      }
+    }),
+
     new webpack.DllReferencePlugin({
       context: path.resolve(__dirname, '..'),
       manifest: require('./vendor-manifest.json')
