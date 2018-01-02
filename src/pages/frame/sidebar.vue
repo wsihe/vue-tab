@@ -274,14 +274,15 @@
         .sidebar__item_nav
           background $color_dark_blue
       .menu
+        margin 0
         background #d8e2ee
         &__list
           position relative
           padding 0 15px 0 15px
           font-size 14px
           color #666
-          height 40px
-          line-height 40px
+          height 50px
+          line-height 50px
           white-space nowrap
           overflow hidden
           as-button()
