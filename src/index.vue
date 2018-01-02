@@ -11,9 +11,9 @@
 
 <script>
   import $ from 'jquery'
-  import mainNav from 'components/base/head'
-  import sideBar from 'components/base/sidebar'
-  import mainTab from 'components/base/tab'
+  import mainNav from 'pages/frame/head'
+  import sideBar from 'pages/frame/sidebar'
+  import mainTab from 'pages/frame/tab'
   export default {
     data () {
       return {

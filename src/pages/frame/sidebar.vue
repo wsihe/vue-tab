@@ -277,7 +277,7 @@
         background #d8e2ee
         &__list
           position relative
-          padding 0 15px 0 52px
+          padding 0 15px 0 15px
           font-size 14px
           color #666
           height 40px
@@ -294,7 +294,7 @@
               height 8px
               border 1px solid #0f75b7
               border-radius 100%
-              left 32px
+              left 0px
               bottom 15px
               background #0f75b7
   // 设置图标, 同时指定元素大小
