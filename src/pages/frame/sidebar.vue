@@ -201,7 +201,7 @@
           position absolute
           top 0
           right 0
-          padding 14px 15px
+          padding 25px
           height 22px
           display inline-block
           as-button()
@@ -274,15 +274,14 @@
         .sidebar__item_nav
           background $color_dark_blue
       .menu
-        margin 0
         background #d8e2ee
         &__list
           position relative
-          padding 0 15px 0 15px
+          padding 0 15px 0 52px
           font-size 14px
           color #666
-          height 50px
-          line-height 50px
+          height 40px
+          line-height 40px
           white-space nowrap
           overflow hidden
           as-button()
@@ -295,7 +294,7 @@
               height 8px
               border 1px solid #0f75b7
               border-radius 100%
-              left 0px
+              left 32px
               bottom 15px
               background #0f75b7
   // 设置图标, 同时指定元素大小

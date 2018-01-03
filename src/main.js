@@ -1,17 +1,16 @@
-import Vue from 'vue';
-import router from './router/router';
-import store from './store/';
-import { tabManager } from './libs/tabManager';
-import ElementUI from 'element-ui';
-import './css/element-theme/lib/index.css';
+import Vue from 'vue'
+import router from './router/router'
+import store from './store/'
+import { tabManager } from './libs/tabManager'
+import directives from './directives/directives'
+import * as filters from './filter/filters'
 import Icon from 'components/icon-svg'
+import Wuui from 'wuui'
+import 'wuui/dist/wuui.css'
 
-import directives from './directives/directives';
-import * as filters from './filter/filters';
+Vue.use(Wuui)
 
 Vue.config.productionTip = false;
-
-Vue.use(ElementUI);
 Vue.component('icon-svg', Icon)
 tabManager(Vue, store, router);
 
