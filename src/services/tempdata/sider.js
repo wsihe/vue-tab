@@ -5,18 +5,12 @@ export const siderList = {
   'menuItem': [
     {
       'icon': 'icon-customer',
-      'label': '用户信息',
+      'label': '登陆',
       'url': null,
       'index': null,
       'menuItem': [
         {
-          'label': '登录',
-          'url': 'colorDemo',
-          'index': null,
-          'menuItem': null
-        },
-        {
-          'label': '拦截',
+          'label': '登录/拦截',
           'url': 'colorDemo',
           'index': null,
           'menuItem': null
@@ -24,8 +18,28 @@ export const siderList = {
       ]
     },
     {
+      'icon': 'icon-report',
+      'label': '构建',
+      'url': null,
+      'index': null,
+      'menuItem': [
+        {
+          'label': '打包优化',
+          'url': 'messageDemo',
+          'index': null,
+          'menuItem': null
+        },
+        {
+          'label': '体积优化',
+          'url': 'messageDemo',
+          'index': null,
+          'menuItem': null
+        }
+      ]
+    },
+    {
       'icon': 'icon-model',
-      'label': '组件',
+      'label': '组件库',
       'url': null,
       'index': null,
       'menuItem': [
@@ -46,48 +60,6 @@ export const siderList = {
         {
           'label': 'Echart 图表',
           'url': 'paginationDemo',
-          'index': null,
-          'menuItem': null
-        }
-      ]
-    },
-    {
-      'icon': 'icon-report',
-      'label': '表单',
-      'url': null,
-      'index': null,
-      'menuItem': [
-        {
-          'label': 'Message 消息',
-          'url': 'messageDemo',
-          'index': null,
-          'menuItem': null
-        }
-      ]
-    },
-    {
-      'icon': 'icon-market',
-      'label': '业务',
-      'url': null,
-      'index': null,
-      'menuItem': [
-        {
-          'label': 'Steps 步骤条',
-          'url': 'MarketView',
-          'index': null,
-          'menuItem': null
-        }
-      ]
-    },
-    {
-      'icon': 'icon-performance',
-      'label': '其他',
-      'url': null,
-      'index': null,
-      'menuItem': [
-        {
-          'label': 'Tooltip 文字提示',
-          'url': 'CoverageReport',
           'index': null,
           'menuItem': null
         }
