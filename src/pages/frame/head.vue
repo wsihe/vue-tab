@@ -4,7 +4,12 @@
       a.logo(href='javascript:void(0)')
     .navbar__collapse
       .navbar__search
-
+        wu-input(v-model="name")
+          template(slot='addonBefore')
+            wu-select(v-model="value1")
+              wu-option(value="a" label="广州")
+              wu-option(value="b" label="北京")
+              wu-option(value="c" label="上海")
 </template>
 
 <script>
@@ -12,6 +17,8 @@
   export default {
     data () {
       return {
+        name: '',
+        value1: 'a',
         userName: '',
         userId: '',
         showMenu: false

@@ -1,5 +1,5 @@
 /**
-* @file   assetView.vue
+* @file   home.vue
 * @author river
 * @create 2017-05-16 13:44
 */
@@ -14,7 +14,7 @@
     name: 'assetView',
     data() {
       return {
-        totalAsset: '',      // 客户总资产
+        totalAsset: ''
       };
     },
     created() {
