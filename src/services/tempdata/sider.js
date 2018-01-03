@@ -11,7 +11,7 @@ export const siderList = {
       'menuItem': [
         {
           'label': '登录/拦截',
-          'url': 'colorDemo',
+          'url': 'loginDemo',
           'index': null,
           'menuItem': null
         }

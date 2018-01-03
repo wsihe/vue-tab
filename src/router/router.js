@@ -8,7 +8,7 @@ import index from '@/index';
 Vue.use(Router);
 
 const home = () => import('@/pages/home.vue');
-const colorDemo = () => import('@/pages/basic/colorDemo.vue');
+const loginDemo = () => import('@/pages/login/loginDemo.vue');
 const buttonDemo = () => import('@/pages/basic/buttonDemo.vue');
 const switchDemo = () => import('@/pages/form/switchDemo.vue');
 const paginationDemo = () => import('@/pages/data/paginationDemo.vue');
@@ -35,28 +35,12 @@ const router = new Router({
         component: home,
       },
       {
-        path: '/colorDemo',
-        name: 'colorDemo',
+        path: '/loginDemo',
+        name: 'loginDemo',
         meta: {
-          title: 'Color-色彩',
+          title: '登陆拦截',
         },
-        component: colorDemo,
-      },
-      {
-        path: '/buttonDemo',
-        name: 'buttonDemo',
-        meta: {
-          title: 'Button-按钮',
-        },
-        component: buttonDemo,
-      },
-      {
-        path: '/switchDemo',
-        name: 'switchDemo',
-        meta: {
-          title: 'Switch-开关',
-        },
-        component: switchDemo,
+        component: loginDemo,
       },
       {
         path: '/paginationDemo',
