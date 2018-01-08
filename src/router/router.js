@@ -8,6 +8,7 @@ import index from '@/index';
 Vue.use(Router);
 
 const home = () => import('@/pages/home.vue');
+const iconDemo = () => import('@/pages/icon/iconDemo.vue');
 const loginDemo = () => import('@/pages/login/loginDemo.vue');
 const buttonDemo = () => import('@/pages/basic/buttonDemo.vue');
 const switchDemo = () => import('@/pages/form/switchDemo.vue');
@@ -41,6 +42,14 @@ const router = new Router({
           title: '登陆拦截',
         },
         component: loginDemo,
+      },
+      {
+        path: '/iconDemo',
+        name: 'iconDemo',
+        meta: {
+          title: 'icon-svg',
+        },
+        component: iconDemo,
       },
       {
         path: '/paginationDemo',

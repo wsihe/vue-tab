@@ -44,6 +44,12 @@ export const siderList = {
       'index': null,
       'menuItem': [
         {
+          'label': 'svg 组件',
+          'url': 'iconDemo',
+          'index': null,
+          'menuItem': null
+        },
+        {
           'label': 'wuui 组件',
           'url': 'ModelManage',
           'index': null,
