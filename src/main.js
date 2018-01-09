@@ -2,7 +2,7 @@ import Vue from 'vue'
 import router from './router/router'
 import store from './store/'
 import { tabManager } from './libs/tabManager'
-import directives from './directives/directives'
+import directives from '@/directives'
 import fitlers from '@/fitlers'
 import Icon from 'components/icon-svg'
 import Wuui from 'wuui'
@@ -14,10 +14,7 @@ Vue.config.productionTip = false
 Vue.component('icon-svg', Icon)
 tabManager(Vue, store, router)
 
-Object.keys(directives).forEach((key) => {
-  Vue.directive(key, directives[key]);
-})
-
+directives()
 fitlers()
 
 new Vue({
