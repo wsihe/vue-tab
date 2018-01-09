@@ -6,6 +6,7 @@ import axios from 'axios'
 import qs from 'qs'
 import router from '@/router/router'
 import store from '@/store/'
+import { browser } from 'utils/browser'
 import { RECORD_LOGOUT } from '@/store/mutation-types'
 
 axios.defaults.timeout = 6000
@@ -16,8 +17,13 @@ const FORM_CONTENT_TYPE = 'application/x-www-form-urlencoded;charset=UTF-8'
 const JSON_CONTENT_TYPE = 'application/json'
 
 axios.interceptors.request.use((config) => {
-  if (config.method === 'post' || config.method === 'put') {
-    config.data = qs.stringify(config.data)
+  if (config.method === 'post') {
+    // post 提交时，将对象转换为string, 为处理Java后台解析问题
+    config.data = JSON.stringify(config.data)
+  } else if (config.method === 'get' && browser.isIE) {
+    // 给GET 请求后追加时间戳， 解决IE GET 请求缓存问题
+    let symbol = config.url.indexOf('?') > 0 ? '&' : '?'
+    config.url += symbol + '_=' + Date.now()
   }
   if (store.state.token) {
     config.headers.Authorization = `token ${store.state.token}`
