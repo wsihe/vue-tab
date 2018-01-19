@@ -36,8 +36,8 @@
     data () {
       return {
         errorTip: '',         // 错误信息提示
-        userName: '3009333',
-        password: 'a123456'
+        userName: '',
+        password: ''
       }
     },
     created () {
