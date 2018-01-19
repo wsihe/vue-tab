@@ -113,32 +113,32 @@ module.exports = {
       {
         test: /\.svg$/,
         use: [
-          { loader: 'svg-sprite-loader', options: { symbolId: 'icon-[name]'} },
-          'svgo-loader'
+          'svg-inline-loader',
+          {
+            loader: 'svgo-loader',
+            options: {
+              plugins: [
+                { removeViewBox: false },
+                { removeXMLNS: true },
+                {
+                  cleanupIDs: {
+                    prefix: {
+                      toString() {
+                        this.counter = this.counter || 0;
+                        return `${this.counter++}-`;
+                      }
+                    }
+                  }
+                }
+              ]
+            }
+          }
         ],
         include: [resolve('src/assets/icons-svg')]
       }
     ]
   },
   plugins: [
-    new webpack.LoaderOptionsPlugin({
-      options: {
-        svgoConfig: {
-          plugins: [
-            { removeTitle: true },
-            { convertColors: { shorthex: true } },
-            { convertPathData: true },
-            { cleanupAttrs: true },
-            { removeComments: true },
-            { removeDesc: true },
-            { removeUselessDefs: true },
-            { removeEmptyAttrs: true },
-            { removeHiddenElems: true },
-            { removeEmptyText: true }
-          ]
-        }
-      }
-    }),
 
     new webpack.DllReferencePlugin({
       context: path.resolve(__dirname, '..'),
