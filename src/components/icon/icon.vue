@@ -1,9 +1,9 @@
 <template lang="pug">
-  svg(version="1.1", class="gf-icon", :role="label ? 'img' : 'presentation'", :aria-label="label", :width="width", :height="height", :viewBox="box", :style="style", v-html="icon.xml")
+  svg(version="1.1", class="wu-icon", :role="label ? 'img' : 'presentation'", :aria-label="label", :width="width", :height="height", :viewBox="box", :style="style", v-html="icon.xml")
 </template>
 
 <script>
-  import { ICON_SVG_PARSER_REG } from '@/utils/regular'
+  const ICON_SVG_PARSER_REG = /<svg viewBox="(.*?)">(.*?)<\/svg>/
   export default {
     name: 'GfIcon',
     props: {
@@ -80,7 +80,7 @@
 </script>
 
 <style lang="stylus">
-  .gf-icon
+  .wu-icon
     display inline-block
     fill currentColor
 </style>
