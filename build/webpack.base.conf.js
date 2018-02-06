@@ -113,23 +113,13 @@ module.exports = {
       {
         test: /\.svg$/,
         use: [
-          'svg-inline-loader',
+          {loader: 'svg-sprite-loader', options: {} },
           {
             loader: 'svgo-loader',
             options: {
               plugins: [
                 { removeViewBox: false },
-                { removeXMLNS: true },
-                {
-                  cleanupIDs: {
-                    prefix: {
-                      toString() {
-                        this.counter = this.counter || 0;
-                        return `${this.counter++}-`;
-                      }
-                    }
-                  }
-                }
+                { removeXMLNS: true }
               ]
             }
           }
