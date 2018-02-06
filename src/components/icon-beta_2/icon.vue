@@ -1,9 +1,9 @@
 <template lang="pug">
-  svg(version="1.1", class="wu-icon", :role="label ? 'img' : 'presentation'", :aria-label="label", :width="width", :height="height", :viewBox="box", :style="style")
-    use(:xlink:href="icon.id")
+  svg(version="1.1", class="wu-icon", :role="label ? 'img' : 'presentation'", :aria-label="label", :width="width", :height="height", :viewBox="box", :style="style", v-html="icon.xml")
 </template>
 
 <script>
+  const ICON_SVG_PARSER_REG = /<svg viewBox="(.*?)">(.*?)<\/svg>/
   export default {
     name: 'GfIcon',
     props: {
@@ -39,14 +39,18 @@
           return {
             width: 0,
             height: 0,
-            id: ''
+            xml: ''
           }
         }
-        let viewBox = this.xml.default.viewBox.split(' ')
+        let res = this.xml.match(ICON_SVG_PARSER_REG)
+        if (!res) {
+          throw new Error('SVG 格式不正确')
+        }
+        let viewBox = res[1].split(' ')
         return {
           width: viewBox[2] || 0,
           height: viewBox[3] || 0,
-          id: '#' + this.xml.default.id
+          xml: res[2]
         }
       },
       box () {
