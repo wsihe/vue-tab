@@ -1,20 +1,21 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 import index from '@/index';
+import loader from './loader'
 // import store from '@/store/'
 // import {RECORD_LOGIN} from '@/store/mutation-types'
 // import {getStore} from '@/common/utils'
 
 Vue.use(Router);
 
-const home = () => import('@/pages/home.vue');
-const iconDemo = () => import('@/pages/icon/iconDemo.vue');
-const loginDemo = () => import('@/pages/login/loginDemo.vue');
-const buttonDemo = () => import('@/pages/basic/buttonDemo.vue');
-const switchDemo = () => import('@/pages/form/switchDemo.vue');
-const paginationDemo = () => import('@/pages/data/paginationDemo.vue');
-const messageDemo = () => import('@/pages/notice/messageDemo.vue');
-const collapseDemo = () => import('@/pages/others/collapseDemo.vue');
+const home = loader('home');
+const iconDemo = loader('icon/iconDemo');
+const loginDemo = loader('login/loginDemo');
+const buttonDemo = loader('basic/buttonDemo');
+const switchDemo = loader('form/switchDemo');
+const paginationDemo = loader('data/paginationDemo');
+const messageDemo = loader('notice/messageDemo');
+const collapseDemo = loader('others/collapseDemo');
 // const login = r => require.ensure([], () => r(require('@/pages/login/login')), 'login')
 const router = new Router({
   mode: 'history',
