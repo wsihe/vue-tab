@@ -1,6 +1,6 @@
 <template lang="pug">
   .page.page-icon
-    icon-svg(name="customer")
+    icon(name="customer")
 </template>
 
 <script>

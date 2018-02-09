@@ -5,7 +5,7 @@
 
 <script>
   export default {
-    name: 'GfIcon',
+    name: 'icon',
     props: {
       name: {
         type: String,
@@ -23,7 +23,8 @@
       }
     },
     async created () {
-      this.xml = await import(/* webpackMode: 'lazy-once', webpackChunkName: 'icon-svg' */ '@/assets/icons/' + this.name + '.svg')
+      this.xml = await import('@/assets/icons-svg/' + this.name + '.svg')
+      console.log(this.xml)
     },
     computed: {
       baseSize () {
@@ -69,7 +70,7 @@
     },
     watch: {
       async name (val) {
-        this.xml = await import(/* webpackMode: 'lazy-once', webpackChunkName: 'icon-svg' */ '@/assets/icons/' + this.name + '.svg')
+        this.xml = await import('@/assets/icons-svg/' + this.name + '.svg')
       }
     }
   }
