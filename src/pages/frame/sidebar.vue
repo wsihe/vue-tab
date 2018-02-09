@@ -180,7 +180,7 @@
     top 60px
     left 0
     bottom 0
-    background #d8e2ee
+    background #374255
     .sidebar-flex
       position relative
       top 0
@@ -190,7 +190,7 @@
         position relative
         height 50px
         line-height 50px
-        background #b4d0ee
+        background #374255
         border-bottom 1px solid $color_dark_white
         &:first-child
           &:hover
@@ -231,7 +231,7 @@
         height 50px
         line-height 50px
         color $color_white
-        background #b4d0ee
+        background #374255
         z-index 999
         .icon
           position absolute
@@ -240,17 +240,15 @@
           height 22px
           display inline-block
           as-button()
-      .sidebar__item
-        border-bottom 1px solid $color_dark_white
       .sidebar__parent
         position relative
         padding 0 20px 0 15px
-        color $color_light_black
+        color #fff
         font-size 16px
         height 50px
         line-height 50px
         as-button()
-        background #b4d0ee
+        background #374255
         .icon
           position relative
           top 5px
@@ -274,7 +272,7 @@
         .sidebar__item_nav
           background $color_dark_blue
       .menu
-        background #d8e2ee
+        background #2c3443
         &__list
           position relative
           padding 0 15px 0 52px
@@ -302,49 +300,27 @@
     set-icon(width, height, image)
     background-position center center
   .icon-sider-flex
-    set-icon-pos 21px 20px "sidebar/icon-sider-flex-active.png"
-    .sidebar__item.active &, .sidebar-flex .sidebar__item:hover &
-      set-icon-pos 21px 20px "sidebar/icon-sider-flex.png"
+    set-icon-pos 21px 20px "sidebar/icon-sider-flex.png"
   .icon-sider-expand
-    set-icon-pos 21px 20px "sidebar/icon-sider-expand-active.png"
-    .sidebar__item.active &, .sidebar-flex .sidebar__item:hover &
-      set-icon-pos 21px 20px "sidebar/icon-sider-expand.png"
+    set-icon-pos 21px 20px "sidebar/icon-sider-expand.png"
   .icon-assets
-    set-icon-pos 18px 20px "sidebar/icon-assets.png"
-    .sidebar__item.active &, .sidebar-flex .sidebar__item:hover &
-      set-icon-pos 18px 20px "sidebar/icon-assets-active.png"
+    set-icon-pos 18px 20px "sidebar/icon-assets-active.png"
   .icon-customer
-    set-icon-pos 18px 20px "sidebar/icon-customer.png"
-    .sidebar__item.active &, .sidebar-flex .sidebar__item:hover &
-      set-icon-pos 18px 20px "sidebar/icon-customer-active.png"
+    set-icon-pos 18px 20px "sidebar/icon-customer-active.png"
   .icon-product
-    set-icon-pos 18px 20px "sidebar/icon-product.png"
-    .sidebar__item.active &, .sidebar-flex .sidebar__item:hover &
-      set-icon-pos 18px 20px "sidebar/icon-product-active.png"
+    set-icon-pos 18px 20px "sidebar/icon-product-active.png"
   .icon-report
-    set-icon-pos 18px 20px "sidebar/icon-report.png"
-    .sidebar__item.active &, .sidebar-flex .sidebar__item:hover &
-      set-icon-pos 18px 20px "sidebar/icon-report-active.png"
+    set-icon-pos 18px 20px "sidebar/icon-report-active.png"
   .icon-market
-    set-icon-pos 18px 20px "sidebar/icon-market.png"
-    .sidebar__item.active &, .sidebar-flex .sidebar__item:hover &
-      set-icon-pos 18px 20px "sidebar/icon-market-active.png"
+    set-icon-pos 18px 20px "sidebar/icon-market-active.png"
   .icon-wallet
-    set-icon-pos 18px 20px "sidebar/icon-wallet.png"
-    .sidebar__item.active &, .sidebar-flex .sidebar__item:hover &
-      set-icon-pos 18px 20px "sidebar/icon-wallet-active.png"
+    set-icon-pos 18px 20px "sidebar/icon-wallet-active.png"
   .icon-model
-    set-icon-pos 18px 20px "sidebar/icon-model.png"
-    .sidebar__item.active &, .sidebar-flex .sidebar__item:hover &
-      set-icon-pos 18px 20px "sidebar/icon-model-active.png"
+    set-icon-pos 18px 20px "sidebar/icon-model-active.png"
   .icon-performance
-    set-icon-pos 18px 20px "sidebar/icon-performance.png"
-    .sidebar__item.active &, .sidebar-flex .sidebar__item:hover &
-      set-icon-pos 18px 20px "sidebar/icon-performance-active.png"
+    set-icon-pos 18px 20px "sidebar/icon-performance-active.png"
   .icon-system
-    set-icon-pos 18px 20px "sidebar/icon-system.png"
-    .sidebar__item.active &, .sidebar-flex .sidebar__item:hover &
-      set-icon-pos 18px 20px "sidebar/icon-system-active.png"
+    set-icon-pos 18px 20px "sidebar/icon-system-active.png"
   .slide-fade-enter-active
     transition all .3s ease
   .slide-fade-leave-active

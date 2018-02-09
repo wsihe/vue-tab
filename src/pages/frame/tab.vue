@@ -47,8 +47,10 @@
   @import '../../css/define'
   .main__tab
     padding 0 20px
-    background #d8e2ee
     height 32px
+    border-bottom 1px solid #d8dce5;
+    box-shadow 0 1px 3px 0 rgba(0,0,0,.12), 0 0 3px 0 rgba(0,0,0,.04)
+    background-color white
     overflow hidden
     .tab__container
       display block
@@ -66,18 +68,18 @@
         min-width 6px
         max-width 150px
         flex 1
+        margin-left 2px
         color #666
-        height 32px
-        line-height 32px
+        height 30px
+        line-height 30px
         text-align center
-        background #b4d1ee
-        border-right 1px solid $color_dark_white
+        background #fff
+        border 1px solid #d8dce5
         as-button()
-        z-index auto
-        &:first-child
-          border-left 1px solid $color_dark_white
         &.active
-          background #e7eef3
+          background #1d8ce0
+        &.active .tab__title
+          color #fff
         &:hover
           opacity 0.8
         .tab__title
@@ -98,8 +100,8 @@
           display block
           cursor pointer
           padding 3px
-          top 10px
-          right 16px
+          top 8px
+          right 10px
           z-index 3
           border-radius 7px
           .close-icon

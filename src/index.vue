@@ -47,24 +47,6 @@
     right 0
     bottom 0
     background #e7eef3
-    .tab__container
-      padding 0 20px
-      background #d8e2ee
-      height 32px
-      overflow hidden
-      .tab__item
-        display inline-block
-        width 150px
-        height 32px
-        color #666
-        line-height 32px
-        text-align center
-        background #b4d1ee
-        &--active
-          background #e7eef3
-        .el-icon-close
-          font-size 8px
-          font-weight 200
     .main__container
       position absolute
       top 30px
