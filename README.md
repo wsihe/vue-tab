@@ -36,7 +36,7 @@ npm run dev
 
 ### 项目截图
 
-![](https://static.oschina.net/uploads/img/201708/08102312_5Tfu.png "")
+![](./git-images/index.png)
 
 ### 说明
 
