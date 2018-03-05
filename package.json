@@ -9,12 +9,14 @@
     "start": "npm run dev",
     "lint": "eslint --ext .js,.vue src",
     "build": "node build/build.js",
-    "build:dll": "webpack --config build/webpack.dll.conf.js"
+    "build:dll": "webpack --config build/webpack.dll.conf.js",
+    "pdf": "node src/printToPDF/index.js"
   },
   "dependencies": {
     "axios": "^0.17.1",
     "jquery": "^3.2.1",
     "moment": "^2.20.1",
+    "puppeteer": "^1.1.1",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1",
     "vuex": "^3.0.1",
