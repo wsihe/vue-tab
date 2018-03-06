@@ -7,6 +7,7 @@
 <template lang="pug">
   .page.page-home
       p (Vue2.0示例项目-多页签应用)
+      p {{ totalAsset.name | match}}
 </template>
 
 <script>
@@ -14,10 +15,15 @@
     name: 'assetView',
     data() {
       return {
-        totalAsset: ''
+        totalAsset: {
+          name: 'json'
+        }
       };
     },
     created() {
+    },
+    mounted () {
+      this.$set(this.totalAsset, 'name', 'json2')
     },
     activated() {
     },
