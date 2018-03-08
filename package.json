@@ -10,7 +10,7 @@
     "lint": "eslint --ext .js,.vue src",
     "build": "node build/build.js",
     "build:dll": "webpack --config build/webpack.dll.conf.js",
-    "pdf": "node src/printToPDF/index.js"
+    "pdf": "node build/printToPDF/index.js"
   },
   "dependencies": {
     "axios": "^0.17.1",
