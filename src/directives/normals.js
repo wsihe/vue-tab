@@ -1,11 +1,11 @@
+/**
+ * 通用vue 指令
+ */
 import { removeClass, addClass } from '@/utils/dom'
 
 export default {
-  /**
-  *
-  * */
-  'up-down' (el, binding, vnode) {
-    let value = binding.value
+  upDown (el, { value, oldValue }) {
+    if (oldValue === value) return
     if (isNaN(value)) {
       value = null
     } else if (typeof value === 'boolean') {
@@ -24,5 +24,9 @@ export default {
       removeClass(el, 'null')
       addClass(el, 'down')
     }
+  },
+  disable: function (el, value) {
+    this.el.disabled = !!value
   }
+  // other directives
 }
