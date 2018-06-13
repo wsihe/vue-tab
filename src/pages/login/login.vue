@@ -71,7 +71,7 @@
             path: redirect
           })
         } else {
-          _this.setError('OA用户验证失败')
+          _this.setError('')
         }
       },
       setError (error) {
