@@ -10,7 +10,8 @@
     "lint": "eslint --ext .js,.vue src",
     "build": "node build/build.js",
     "build:dll": "webpack --config build/webpack.dll.conf.js",
-    "pdf": "node build/printToPDF/index.js"
+    "pdf": "node build/printToPDF/index.js",
+    "test": "jest --config test/unit/jest.conf.js"
   },
   "dependencies": {
     "axios": "^0.17.1",
@@ -23,6 +24,7 @@
     "wuui": "^0.2.0"
   },
   "devDependencies": {
+    "@vue/test-utils": "^1.0.0-beta.20",
     "autoprefixer": "^7.1.2",
     "babel-core": "^6.22.1",
     "babel-eslint": "^7.1.1",
@@ -47,6 +49,8 @@
     "friendly-errors-webpack-plugin": "^1.6.1",
     "happypack": "^4.0.0",
     "html-webpack-plugin": "^2.30.1",
+    "jest": "^23.2.0",
+    "jest-serializer-vue": "^2.0.2",
     "node-notifier": "^5.1.2",
     "node-sass": "^4.7.2",
     "optimize-css-assets-webpack-plugin": "^3.2.0",
@@ -68,6 +72,7 @@
     "svgo-loader": "^2.1.0",
     "uglifyjs-webpack-plugin": "^1.1.1",
     "url-loader": "^0.5.8",
+    "vue-jest": "^2.6.0",
     "vue-loader": "^13.3.0",
     "vue-style-loader": "^3.0.1",
     "vue-template-compiler": "^2.5.2",
