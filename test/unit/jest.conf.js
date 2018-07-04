@@ -1,4 +1,6 @@
+const path = require('path')
 module.exports = {
+  rootDir: path.resolve(__dirname, '../../'),
   moduleFileExtensions: ['js', 'json', 'vue'],
   // 支持源代码中相同的 `@` -> `src` 别名
   moduleNameMapper: {
